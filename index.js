@@ -12,13 +12,14 @@ const critChanceHint = document.querySelector(".crit-chance-hint");
 const critPowerHint = document.querySelector(".crit-power-hint")
 
 clickArea.onclick = function() {
-    updateGui();
+    
     if (Math.random() * 101 <= critChance){
         cash += cashPerClick * critPower;
     }
     else {
         cash += cashPerClick;
     }
+    updateGui();
 }
 
 let cash = 0;
